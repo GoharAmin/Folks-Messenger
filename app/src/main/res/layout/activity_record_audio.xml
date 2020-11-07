@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBG"
+    tools:context=".Activities.RecordAudioActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:text="Record Audio"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/headingText"
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="54dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sdfd"
+                android:layout_centerHorizontal="true"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/blackColor"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_margin="12dp"
+                    android:id="@+id/sdfd"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_audio_wave" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:id="@+id/textView_Time"
+                android:layout_below="@id/sdfd"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_below="@id/imageCard"
+        android:layout_above="@id/cardView_Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="35dp"
+        android:animateLayoutChanges="true"
+        >
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView_Record"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/aar_ic_rec"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/textView_Play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/textView_Record"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:src="@drawable/aar_ic_play"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/textView_Stop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tint="@color/colorPrimary"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/aar_ic_stop" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/cardView_Save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="-1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Send"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

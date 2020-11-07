@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBG"
+    tools:context=".Activities.CreateNewGroupActivity">
+
+    <RelativeLayout
+        android:id="@+id/head_new_group"
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_new_group">
+
+        <!--<EditText-->
+        <!--android:visibility="gone"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:hint="Search Here"-->
+        <!--android:maxLines="1"-->
+        <!--android:textColor="#309BF8"-->
+        <!--android:textColorHint="#309BF8"-->
+        <!--android:imeOptions="actionDone"-->
+        <!--android:singleLine="true"-->
+        <!--android:id="@+id/search_edit_new_group"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="@drawable/grp_name_bg"/>-->
+
+        <TextView
+            android:id="@+id/txx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Group"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/blackColor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txx2"
+            android:layout_below="@id/txx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Make new group with your friends here"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_layout"
+            android:layout_below="@id/txx2"
+            android:layout_marginTop="16dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/group_image_new_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:src="@drawable/group"/>
+
+
+            <ImageView
+                android:id="@+id/add_group_image_new_group"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_camera_alt_blue_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/group_name_edit_create_grp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="16dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="Group Name"
+            android:paddingLeft="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingRight="16dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_below="@id/img_layout"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/group_name_edit_create_grp"
+            android:layout_above="@id/create_grp_btn"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_recycler_create_grp"/>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/create_grp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="CREATE"
+            android:background="@drawable/rounded_btn_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

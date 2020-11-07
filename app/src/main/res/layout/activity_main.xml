@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryBG"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/heading_background_top_bg">
+
+        <TextView
+            android:id="@+id/headingMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat App"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/moreBtn"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:src="@drawable/ic_more_vert_white_24dp" />-->
+
+        <ImageView
+            android:id="@+id/addBtnMain"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_add_blue_24dp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/optionBtnMain"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_more_vert_white_24dp" />
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/heading"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:background="@drawable/bottom_background_rounded"
+        android:weightSum="4"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:id="@+id/callLayoutBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/callIconBot"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/call_ic_bot" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/statusLayoutBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/statusIconBot"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/status_ic_bot_per" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/messageLayoutBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/messageIconBot"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/message_ic_bot" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personLayoutBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/personIconBot"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/settings_ic_bot" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

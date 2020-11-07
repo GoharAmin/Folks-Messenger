@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Message_Layout_Control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:animateLayoutChanges="true"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/other_layout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/otherPersonImageForMessage"
+            android:layout_marginTop="6dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/person_iccc"
+            />
+
+            <LinearLayout
+                android:layout_marginLeft="6dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@drawable/other_message_round_bg"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/message_row_message_bg_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:layout_margin="4dp"
+                        android:padding="8dp"
+                        android:background="@drawable/reply_message_bg"
+                        android:backgroundTint="#33000000"
+                        android:id="@+id/replyLayoutOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/messageSenderNameReplyMessageOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Bilal Mustafa" />
+
+                        <LinearLayout
+                            android:layout_below="@id/messageSenderNameReplyMessageOther"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/messageTextReplyMessageOther"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_gravity="center_vertical"
+                                android:maxLines="3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Audio" />
+
+                            <ImageView
+                                android:id="@+id/messageImageReplyMessageOther"
+                                android:visibility="gone"
+                                android:layout_marginLeft="8dp"
+                                android:src="@color/colorPrimary"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_below="@id/replyLayoutOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sender_name_grp_card"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="12dp"
+                            android:singleLine="true"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/blackColor"
+                            android:layout_height="wrap_content"
+                            android:text="Sender_name"/>
+
+                        <RelativeLayout
+                            android:layout_below="@id/sender_name_grp_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_marginTop="8dp"
+                                    android:id="@+id/Message_View_Id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="First Message"
+                                    android:layout_marginLeft="12dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_doc_type_layout"
+                                    android:layout_width="200dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/doc_text"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Document File"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:textColor="@color/blackColor"
+                                        android:visibility="visible" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/audio_layout"
+                                    android:layout_width="200dp"
+                                    android:layout_height="50dp">
+
+                                    <ImageView
+                                        android:id="@+id/play_audio"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="35dp"
+                                        android:tint="@color/blackColor"
+                                        android:src="@drawable/ic_play_circle_filled_white_24dp"
+                                        android:layout_height="35dp" />
+
+                                    <TextView
+                                        android:id="@+id/audio_text"
+                                        android:layout_toRightOf="@id/play_audio"
+                                        android:layout_margin="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Audio Message"
+                                        android:textColor="@color/blackColor"
+                                        android:fontFamily="@font/montserrat_bold"
+                                        android:layout_centerVertical="true"
+                                        android:visibility="visible" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_marginTop="8dp"
+                                    android:id="@+id/rlchat_message_row"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/image_id_message_row"
+                                        android:layout_width="200dp"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"
+                                        android:layout_height="200dp"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:id="@+id/play_icon"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:tint="@color/colorPrimary"
+                                        android:src="@drawable/ic_play_circle_filled_white_24dp"
+                                        android:layout_centerInParent="true"/>
+
+                                    <com.wang.avi.AVLoadingIndicatorView
+                                        android:id="@+id/avi_message_row"
+                                        style="@style/AVLoadingIndicatorView.Large"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:visibility="gone"
+                                        app:indicatorColor="@color/colorPrimary"
+                                        app:indicatorName="BallClipRotatePulseIndicator" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/time_text_message_row"
+                    android:textColor="@color/lightBlackColor"
+                    android:layout_below="@id/message_row_message_bg_card"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="1dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:text="11:56 pm"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/my_layout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="end"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/my_message_round_bg"
+                android:id="@+id/message_row_message_bg_card_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               >
+
+                <RelativeLayout
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:background="@drawable/reply_message_bg"
+                    android:backgroundTint="#66000000"
+                    android:id="@+id/replyLayoutMy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/messageSenderNameReplyMessageMy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Bilal Mustafa" />
+
+                    <LinearLayout
+                        android:layout_below="@id/messageSenderNameReplyMessageMy"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/messageTextReplyMessageMy"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_gravity="center_vertical"
+                            android:maxLines="3"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Audio" />
+
+                        <ImageView
+                            android:id="@+id/messageImageReplyMessageMy"
+                            android:visibility="gone"
+                            android:layout_marginLeft="8dp"
+                            android:src="@color/colorPrimary"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/replyLayoutMy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/Message_View_Id_my"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sdf"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="12dp"
+                                android:textColor="@color/white"
+                                android:visibility="visible" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_doc_type_layout_my"
+                                android:layout_width="200dp"
+                                android:layout_height="50dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/doc_text_my"
+                                    android:layout_margin="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Document File"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:textColor="@color/white"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/audio_layout_my"
+                                android:layout_width="200dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:id="@+id/play_audio_my"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_width="35dp"
+                                    android:src="@drawable/ic_play_circle_filled_white_24dp"
+                                    android:tint="@color/white"
+                                    android:layout_height="35dp" />
+
+                                <TextView
+                                    android:id="@+id/audio_text_my"
+                                    android:layout_toRightOf="@id/play_audio_my"
+                                    android:layout_margin="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Audio Message"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlchat_message_row_my"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/image_id_message_row_my"
+                                    android:layout_width="200dp"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"
+                                    android:layout_height="200dp"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/play_icon_my"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_play_circle_filled_white_24dp"
+                                    android:layout_centerInParent="true"/>
+
+                                <com.wang.avi.AVLoadingIndicatorView
+                                    android:id="@+id/avi_message_row_my"
+                                    style="@style/AVLoadingIndicatorView.Large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone"
+                                    app:indicatorColor="@color/colorPrimary"
+                                    app:indicatorName="BallClipRotatePulseIndicator" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_gravity="right"
+                android:singleLine="true"
+                android:id="@+id/time_text_message_row_my"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/message_row_message_bg_card_my"
+                android:layout_alignRight="@id/message_row_message_bg_card_my"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_height="wrap_content"
+                android:text="11:56 pm"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/groupLeavingCardView"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/groupLeavingMessageGroupMessageRow"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/blackColor"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ali Have Left The Group" />
+
+            <TextView
+                android:id="@+id/groupLeavingTime"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/groupLeavingMessageGroupMessageRow"
+                android:layout_gravity="right"
+                android:singleLine="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/lightBlackColor"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="11:56 pm"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/headerLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_baseline_lock_24" />
+
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackColor"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Messages to this group are now secured with end-to-end encryption" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

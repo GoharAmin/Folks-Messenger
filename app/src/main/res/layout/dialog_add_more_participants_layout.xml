@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryBG"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Add Participant" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="16dp"
+            android:id="@+id/participantsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:layout_below="@id/participantsRecycler"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_weight="0.46"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_bg"
+                android:backgroundTint="@color/redColor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.08" />
+
+            <Button
+                android:id="@+id/startCallBtn"
+                android:layout_width="0dp"
+                android:layout_weight="0.46"
+                android:textColor="@color/white"
+                android:text="Start"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_bg"
+                android:backgroundTint="#32CD32" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389935223208",
+    "firebase_url": "https://holst-messenger.firebaseio.com",
+    "project_id": "holst-messenger",
+    "storage_bucket": "holst-messenger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389935223208:android:19d3f4c3d692d2ea718d9d",
+        "android_client_info": {
+          "package_name": "codegradients.com.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389935223208-9cl2u4iush7dckhsfcqvuota6pedo92h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_sQ9Hf3otKI5gU6Z2s_FJdvU0CE83sks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389935223208-9cl2u4iush7dckhsfcqvuota6pedo92h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

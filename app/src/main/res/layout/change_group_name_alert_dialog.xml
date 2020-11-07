@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/editing_head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/heading_background_top_bg">
+
+        <TextView
+            android:id="@+id/heading_edit_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/editing_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingLeft="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="Enter New Name"
+                android:background="@drawable/grp_name_bg"
+                android:id="@+id/change_grp_name_edit"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

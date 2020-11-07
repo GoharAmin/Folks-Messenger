@@ -1,0 +1,158 @@
+<resources>
+    <string name="app_name">Follks Messenger</string>
+
+    <string name="firebase_message_key">key=AAAAWsnzUag:APA91bFbWvYqT4BG-ONOfzG8d62MHXbxI-8yd5T0vq2HP9SSZZkxS36u7ZpLKVMjD-ifg68LjO1oOB95_HBUceApAfpCe1qWJOiKrz-1qngzf8AJahPzj8U-QpTzpj7rwDCq4TD9cjoU</string>
+
+    <string name="sinch_app_key">73d554a7-9a4a-4067-b9c9-372ec6af9354</string>
+    <string name="sinch_app_secret">RgHibdzLEkOalBwCpB7gJw==</string>
+    <string name="sinch_app_environment">clientapi.sinch.com</string>
+
+    <string name="str_info_provide_request">Please provide your name and a profile photo</string>
+    <string name="str_type_name">Type Your name here</string>
+    <string name="str_next">Next</string>
+    <string name="str_about">Add  about</string>
+    <string name="str_status">Type a status</string>
+    <string name="str_mystatus">My status</string>
+    <string name="str_dummy_date">Yesterday, 7:35 pm</string>
+    <string name="str_recent_updates">Recent updates</string>
+    <string name="str_view">0 views</string>
+    <string name="str_record_audio">Record Audio</string>
+    <string name="str_record">Record</string>
+    <string name="str_play">Play</string>
+    <string name="str_stop">Stop</string>
+
+    <string-array name="emojisArray">
+        <item>😀</item>
+        <item>😁</item>
+        <item>😂</item>
+        <item>🤣</item>
+        <item>😃</item>
+        <item>😄</item>
+        <item>😅</item>
+        <item>😆</item>
+        <item>😉</item>
+        <item>😊</item>
+        <item>😋</item>
+        <item>😎</item>
+        <item>😍</item>
+        <item>😘</item>
+        <item>🥰</item>
+        <item>😗</item>
+        <item>😙</item>
+        <item>😚</item>
+        <item>☺️</item>
+        <item>🙂</item>
+        <item>🤗</item>
+        <item>🤩</item>
+        <item>🤔</item>
+        <item>🤨</item>
+        <item>😐</item>
+        <item>😑</item>
+        <item>😶</item>
+        <item>🙄</item>
+        <item>😏</item>
+        <item>😣</item>
+        <item>😥</item>
+        <item>😮</item>
+        <item>🤐</item>
+        <item>😯</item>
+        <item>😪</item>
+        <item>😫</item>
+        <item>😴</item>
+        <item>😌</item>
+        <item>😛</item>
+        <item>😜</item>
+        <item>😝</item>
+        <item>🤤</item>
+        <item>😒</item>
+        <item>😓</item>
+        <item>😔</item>
+        <item>😕</item>
+        <item>🙃</item>
+        <item>🤑</item>
+        <item>😲</item>
+        <item>☹️</item>
+        <item>🙁</item>
+        <item>😖</item>
+        <item>😞</item>
+        <item>😟</item>
+        <item>😤</item>
+        <item>😢</item>
+        <item>😭</item>
+        <item>😦</item>
+        <item>😨</item>
+        <item>😩</item>
+        <item>🤯</item>
+        <item>😬</item>
+        <item>😰</item>
+        <item>😱</item>
+        <item>🥵</item>
+        <item>🥶</item>
+        <item>😳</item>
+        <item>🤪</item>
+        <item>😵</item>
+        <item>😡</item>
+        <item>😠</item>
+        <item>😷</item>
+        <item>🤒</item>
+        <item>🤕</item>
+        <item>🤢</item>
+        <item>🤮</item>
+        <item>🤧</item>
+        <item>🤠</item>
+        <item>🤡</item>
+        <item>🥴</item>
+        <item>🥳</item>
+        <item>🥺</item>
+        <item>🤥</item>
+        <item>🤫</item>
+        <item>🤭</item>
+        <item>🧐</item>
+        <item>🤓</item>
+        <item>😈</item>
+        <item>👿</item>
+        <item>👹</item>
+        <item>👺</item>
+        <item>💀</item>
+        <item>👻</item>
+        <item>🧛‍</item>
+        <item>🧛‍♂️</item>
+        <item>🤰</item>
+        <item>🤱</item>
+        <item>👫</item>
+        <item>💑</item>
+        <item>👪</item>
+        <item>👨‍👩‍👧‍👦</item>
+        <item>👍</item>
+        <item>👎</item>
+        <item>👐</item>
+        <item>👏</item>
+        <item>🤝</item>
+        <item>👊</item>
+        <item>✊</item>
+        <item>🤛</item>
+        <item>✌️</item>
+        <item>👌</item>
+        <item>☝️</item>
+        <item>💪</item>
+        <item>🙏</item>
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+
+
+    </string-array>
+
+</resources>

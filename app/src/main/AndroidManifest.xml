@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="codegradients.com.chatapp">
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-sdk
+        android:minSdkVersion="23"
+        tools:overrideLibrary="org.jitsi.meet.sdk,co.apptailor.googlesignin,com.calendarevents,com.reactnativecommunity.asyncstorage,com.reactnativecommunity.netinfo,com.kevinresol.react_native_default_preference,com.rnimmersive,com.corbt.keepawake,com.BV.LinearGradient,com.horcrux.svg,com.oney.WebRTCModule" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo_a"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/app_logo_a"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="codegradients.com.chatapp.Activities.ConferenceCallActivity"></activity>
+        <activity android:name="codegradients.com.chatapp.Activities.ForwardMessagesActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.ScheduledMessagesActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.AddPostActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.PostDetailActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.ImageViewingActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="codegradients.com.chatapp.Activities.BarcodeScanningForWebLoginActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.AddNewMembersToGroupActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.GroupDetailActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.RecordAudioActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.MyStatusActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.ShowStatusActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.VideoTrimActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.TextStatusActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.UserProfileActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.GroupChatActivity">
+            <intent-filter>
+                <action android:name="jeuxdevelopers.com.holstmessenger.Activities.GroupChatActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="codegradients.com.chatapp.Activities.CreateNewGroupActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.VideoPlayingActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.ChatActivity">
+            <intent-filter>
+                <action android:name="jeuxdevelopers.com.holstmessenger.Activities.ChatActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <activity android:name="codegradients.com.chatapp.Activities.PersonalInfoTakingActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.AuthenticationScreens.OTPVerificationActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.AuthenticationScreens.LoginActivity" />
+        <activity android:name="codegradients.com.chatapp.Activities.SelectContactForNewChatActivity" />
+        <activity
+            android:name="codegradients.com.chatapp.Activities.MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <service android:name="codegradients.com.chatapp.helper_classes.SinchService" />
+        <service android:name="codegradients.com.chatapp.helper_classes.FirebaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="codegradients.com.chatapp.Activities.SinchScreens.CallScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="codegradients.com.chatapp.Activities.SinchScreens.IncomingCallScreenActivity"
+            android:autoRemoveFromRecents="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait" /> <!-- <service -->
+        <!-- android:name=".helper_classes.ScreenshotPrevention.service.ASS" -->
+        <!-- android:process=":remote"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="abc.def.ghi" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <receiver
+            android:name="codegradients.com.chatapp.helper_classes.AlarmReceiver"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

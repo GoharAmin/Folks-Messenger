@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">#273b87</item>
+    </style>
+
+
+
+<!--    For Switch Custom-->
+<!--    android:theme="@style/SCBSwitch"-->
+
+<!--    <style name="SCBSwitch" parent="Theme.AppCompat.Light">-->
+<!--        &lt;!&ndash; active thumb & track color (30% transparency) &ndash;&gt;-->
+<!--        <item name="colorControlActivated">#ffffff</item>-->
+
+<!--        &lt;!&ndash; inactive thumb color &ndash;&gt;-->
+<!--        <item name="colorSwitchThumbNormal">#e5e5e5-->
+<!--        </item>-->
+
+<!--        &lt;!&ndash; inactive track color (30% transparency) &ndash;&gt;-->
+<!--        <item name="android:colorForeground">#44ffffff-->
+<!--        </item>-->
+<!--    </style>-->
+
+</resources>

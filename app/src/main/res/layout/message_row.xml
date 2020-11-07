@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Message_Layout_Control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:animateLayoutChanges="true"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/other_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/other_message_round_bg">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    android:background="@drawable/reply_message_bg"
+                    android:backgroundTint="#33000000"
+                    android:id="@+id/replyLayoutOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/messageSenderNameReplyMessageOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Bilal Mustafa" />
+
+                    <LinearLayout
+                        android:layout_below="@id/messageSenderNameReplyMessageOther"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/messageTextReplyMessageOther"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_gravity="center_vertical"
+                            android:maxLines="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Audio" />
+
+                        <ImageView
+                            android:id="@+id/messageImageReplyMessageOther"
+                            android:visibility="gone"
+                            android:layout_marginLeft="8dp"
+                            android:src="@color/colorPrimary"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/replyLayoutOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Message_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="12dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="sfs"
+                        android:textColor="@color/blackColor"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_doc_type_layout"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/doc_text_message_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Document File"
+                            android:textColor="@color/blackColor"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/audio_layout"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/play_audio"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:src="@drawable/ic_play_circle_filled_white_24dp"
+                            android:tint="@color/blackColor" />
+
+                        <TextView
+                            android:id="@+id/audio_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="12dp"
+                            android:layout_toRightOf="@id/play_audio"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Audio Message"
+                            android:textColor="@color/blackColor"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlchat_message_row"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_id_message_row"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@color/colorPrimary"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/play_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_play_circle_filled_white_24dp" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/avi_message_row"
+                            style="@style/AVLoadingIndicatorView.Large"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            app:indicatorColor="@color/colorPrimary"
+                            app:indicatorName="BallClipRotatePulseIndicator" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time_text_message_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="11:56"
+                android:textColor="@color/lightBlackColor"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/my_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/my_message_round_bg">
+
+                <RelativeLayout
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:background="@drawable/reply_message_bg"
+                    android:backgroundTint="#66000000"
+                    android:id="@+id/replyLayoutMy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/messageSenderNameReplyMessageMy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Bilal Mustafa" />
+
+                    <LinearLayout
+                        android:layout_below="@id/messageSenderNameReplyMessageMy"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/messageTextReplyMessageMy"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_gravity="center_vertical"
+                            android:maxLines="3"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Audio" />
+
+                        <ImageView
+                            android:id="@+id/messageImageReplyMessageMy"
+                            android:visibility="gone"
+                            android:layout_marginLeft="8dp"
+                            android:src="@color/colorPrimary"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/replyLayoutMy"
+                    android:id="@+id/mainLayoutMyMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Message_View_Id_my"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="12dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="A"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_doc_type_layout_my"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/doc_text_message_row_my"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Document File"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/audio_layout_my"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/play_audio_my"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:src="@drawable/ic_play_circle_filled_white_24dp"
+                            android:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/audio_text_my"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="12dp"
+                            android:layout_toRightOf="@id/play_audio_my"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Audio Message"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlchat_message_row_my"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_id_message_row_my"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@color/colorPrimary"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/play_icon_my"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_play_circle_filled_white_24dp" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/avi_message_row_my"
+                            style="@style/AVLoadingIndicatorView.Large"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            app:indicatorColor="@color/colorPrimary"
+                            app:indicatorName="BallClipRotatePulseIndicator" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/message_status_icon_my"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sent_icon" />
+
+                <TextView
+                    android:id="@+id/time_text_message_row_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="11:56"
+                    android:textColor="@color/myMessageBgColor"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/headerLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_baseline_lock_24" />
+
+                <TextView
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackColor"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Messages to this chat and calls are now secured with end-to-end encryption" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

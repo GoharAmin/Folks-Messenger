@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImageParticipant"
+            android:layout_width="50dp"
+            android:src="@drawable/person_iccc"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/userImageParticipant"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/userNameParticipant"
+                android:singleLine="true"
+                android:buttonTint="@color/white"
+                android:layout_width="match_parent"
+                android:text="UserName"
+                android:layoutDirection="rtl"
+                android:textColor="@color/blackColor"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

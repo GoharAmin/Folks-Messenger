@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryBG"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ImageViewingActivity">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="53dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_height="45dp"
+            android:tint="#fff"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/Image_View_ID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="BallPulseIndicator" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

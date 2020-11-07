@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBG"
+    tools:context=".Activities.GroupDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/head_grp_detail"
+        android:layout_width="match_parent"
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/back_btn_grp_detail"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"/>
+
+
+        <TextView
+            android:layout_toRightOf="@id/back_btn_grp_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Details"
+            android:layout_marginLeft="18dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/add_members_group_detail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_add_blue_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head_grp_detail">
+
+        <RelativeLayout
+            android:id="@+id/img_layout_grp_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/notification_switch_group_details"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/group_image_group_detail"
+                    android:src="@drawable/group"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"/>
+
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:id="@+id/change_group_image_group_detail"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_camera_alt_blue_24dp"
+                    />
+
+            </RelativeLayout>
+
+            <Switch
+                android:id="@+id/notification_switch_group_details"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:checked="false"
+                android:switchPadding="12dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/img_layout_grp_detail"
+            android:id="@+id/grp_name_text_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Name"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/blackColor"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="30dp"/>
+
+
+        <ImageView
+            android:layout_below="@id/img_layout_grp_detail"
+            android:id="@+id/edit_group_name_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_edit_blue_24dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:id="@+id/line_below_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/unselected_bot_icon_tint"
+            android:layout_below="@id/grp_name_text_detail"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/member_heading_grp_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Members"
+            android:layout_below="@id/line_below_group_name"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/blackColor"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:id="@+id/members_recycler"
+            android:layout_below="@id/member_heading_grp_detail"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_above="@id/leave_btn_group_detail"
+            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/leave_btn_group_detail"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Leave Group"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#fff"
+            />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_centerInParent="true"
+            android:id="@+id/avi_group_detail"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="BallScaleMultipleIndicator" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

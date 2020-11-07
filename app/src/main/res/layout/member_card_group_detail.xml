@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#18ffffff"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        android:id="@+id/member_card_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_centerVertical="true"
+            android:id="@+id/avi_member_card"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="BallClipRotatePulseIndicator" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/member_Image_card"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/member_Image_card"
+            android:layout_toLeftOf="@id/more_btn_member_card_grp_detail"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_Name_member_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/blackColor"/>
+
+            <TextView
+                android:id="@+id/member_status_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/lightBlackColor"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/more_btn_member_card_grp_detail"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/colorPrimary"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_more_horiz_black_24dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

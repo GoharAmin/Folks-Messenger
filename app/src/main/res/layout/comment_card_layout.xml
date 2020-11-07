@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/commenterImageCommentCard"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/camera_ic_bot" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_toRightOf="@id/commenterImageCommentCard"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/commenterNameCommentCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Commenter Name" />
+
+                <TextView
+                    android:id="@+id/commentTimeCommentCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 hours Ago"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="15sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#e5e5e5" />
+
+                <TextView
+                    android:id="@+id/commentCommentCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nice Post"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/commenterNameCommentCard"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

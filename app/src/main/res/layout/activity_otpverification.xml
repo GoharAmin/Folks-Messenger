@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryBG"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AuthenticationScreens.OTPVerificationActivity">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/heading_background_top_bg">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:tint="#fff"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Verify Your Phone Number" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading">
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Enter the code that you receive here."/>
+
+        <EditText
+            android:id="@+id/otp_edit_otp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:autoText="false"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/ic_smartphone"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:hint="OTP"
+            android:fontFamily="@font/montserrat_regular"
+            android:drawableTint="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textAlignment="center"
+            android:inputType="numberSigned"
+            android:textColor="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_smartphone" />
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+    <Button
+        android:id="@+id/continue_btn_otp"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_margin="20dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_btn_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>

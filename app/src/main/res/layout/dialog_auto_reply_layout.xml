@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryBG"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:text="Auto Reply Message" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/autoReplyMessageEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColorHint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Enter Messages" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#007EF4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn_bg" />
+
+    </LinearLayout>
+
+</RelativeLayout>

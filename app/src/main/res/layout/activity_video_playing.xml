@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackColor"
+    tools:context=".Activities.VideoPlayingActivity">
+
+    <RelativeLayout
+        android:background="@drawable/heading_background_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/head">
+
+        <ImageView
+            android:id="@+id/back_btn_"
+            android:layout_width="53dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_height="45dp"
+            android:tint="#fff"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_text"
+            android:text="Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/back_btn_"
+            android:id="@+id/userNameChat"/>
+
+    </RelativeLayout>
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:layout_below="@id/head"
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
